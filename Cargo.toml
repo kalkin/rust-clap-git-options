@@ -1,0 +1,13 @@
+[package]
+name = "clap-git-options"
+version = "0.1.0"
+license = "Apache-2.0"
+description = "Easily add `-C`, `--git-dir` & `--work-tree` flags"
+edition = "2021"
+repository = "https://localhost/"
+keywords = [ "cli", "clap", "git"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+clap = { version = "3", default-features = false, features = ["std", "derive"] }
+git-wrapper = { version = "0.5.*", optional = true }
