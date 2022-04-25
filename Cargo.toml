@@ -4,7 +4,7 @@ version = "0.1.0"
 license = "Apache-2.0"
 description = "Easily add `-C`, `--git-dir` & `--work-tree` flags"
 edition = "2021"
-repository = "https://localhost/"
+repository = "https://github.com/kalkin/rust-clap-git-options"
 keywords = [ "cli", "clap", "git"]
 categories = ["command-line-utilities"]
 
