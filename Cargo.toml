@@ -8,6 +8,8 @@ repository = "https://github.com/kalkin/rust-clap-git-options"
 keywords = [ "cli", "clap", "git"]
 categories = ["command-line-utilities"]
 
+[lib]
+
 [dependencies]
 clap = { version = "3", default-features = false, features = ["std", "derive"] }
 git-wrapper = { version = "0.6.*", optional = true }
