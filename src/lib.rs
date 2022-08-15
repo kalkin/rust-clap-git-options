@@ -1,17 +1,19 @@
 //! Provides the iconic `-C`, `--git-dir` & `--work-tree` git options
 
+use clap::ValueHint;
+
 /// The `clap::Args` struct
 #[derive(clap::Args, Default, Debug)]
 #[clap(next_help_heading = "Git Options")]
 pub struct GitOptions {
     /// Run as if was started in <path>
-    #[clap(short = 'C', takes_value = true)]
+    #[clap(short = 'C', takes_value = true, value_hint=ValueHint::DirPath)]
     pub change_dir: Option<String>,
     /// Directory where the GIT_DIR is
-    #[clap(long)]
+    #[clap(long, value_hint=ValueHint::DirPath)]
     pub git_dir: Option<String>,
     /// Directory where the GIT_WORK_TREE is
-    #[clap(long)]
+    #[clap(long, value_hint=ValueHint::DirPath)]
     pub work_tree: Option<String>,
 }
 
