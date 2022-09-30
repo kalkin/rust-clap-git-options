@@ -7,7 +7,7 @@ use clap::ValueHint;
 #[clap(next_help_heading = "Git Options")]
 pub struct GitOptions {
     /// Run as if was started in <path>
-    #[clap(short = 'C', takes_value = true, value_hint=ValueHint::DirPath)]
+    #[clap(short = 'C', num_args = 1, value_hint=ValueHint::DirPath)]
     pub change_dir: Option<String>,
     /// Directory where the GIT_DIR is
     #[clap(long, value_hint=ValueHint::DirPath)]
